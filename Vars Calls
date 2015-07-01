@@ -1,0 +1,28 @@
+public class SomeClass 
+{
+  private var s:String;
+  public static constant i:Number;
+  public static var j:Number = 10;
+
+  public static function getJ():Number 
+  {
+    return SomeClass.j;
+  }
+  public static function getSomeString():String 
+  {
+    return "someString";
+  }
+}
+
+In the TestStatic, static variables and functions can be accessed without creating an instance of SomeClass.
+
+public class TestStaic 
+{
+  public function TestStaic():void 
+  {
+    trace(SomeClass.j);  // prints 10
+    trace(SomeClass.getSomeString());  //prints "someString"
+    SomeClass.j++; 
+    trace(SomeClass.j);  //prints 11
+  }
+}
